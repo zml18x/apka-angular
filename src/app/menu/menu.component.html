@@ -1,0 +1,15 @@
+<div class="sidebar">
+    <nav *ngIf="authService.isLoggedIn()">
+        <ul>
+            <li><button>OPTION 1</button></li>
+            <li><button>OPTION 2</button></li>
+            <li><button (click)="authService.logout()">SIGN OUT</button></li>
+        </ul>
+    </nav>
+    <nav *ngIf="!authService.isLoggedIn()">
+        <ul>
+            <li><button (click)="navigateToLogin()">SIGN IN</button></li>
+        </ul>
+    </nav>
+  </div>
+  

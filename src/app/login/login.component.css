@@ -18,6 +18,7 @@ body {
     max-width: 320px;
     width: 100%;
     text-align: center;
+    position: relative; /* Dodajemy pozycję względną, aby móc użyć absolutnej dla .error-message */
 }
 
 h3 {
@@ -70,3 +71,28 @@ button[type="submit"] {
 button[type="submit"]:hover {
     background-color: #555;
 }
+
+.error-message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #bbbbbb;
+    margin-top: 15px;
+    border: 1px solid rgb(172, 24, 24);
+    border-radius: 5px;
+    background-color: rgba(136, 59, 59, 0.301);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: 50px;
+    position: absolute;
+    bottom: -65px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    width: 100%;
+    text-align: center;
+    font-family: Urbanist;   
+}
+
